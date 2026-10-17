@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>АвтоАтелье «КоТиС» — перетяжка салона в Вологде</title>
+  <meta name="description" content="АвтоАтелье «КоТиС» в Вологде: перетяжка руля, сидений, потолка и дверных карт, пошив каркасных авточехлов, реставрация кожи, шумоизоляция и детейлинг. Опыт 10 лет, гарантия на работы.">
+  <meta name="theme-color" content="#0f0e10" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f7f3ec" media="(prefers-color-scheme: light)">
+  <meta name="color-scheme" content="dark light">
+
+  <!-- Токен __SITE_URL__ заменяется при деплое; для локального просмотра он ни на что не влияет. -->
+  <link rel="canonical" href="__SITE_URL__/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="АвтоАтелье «КоТиС»">
+  <meta property="og:title" content="АвтоАтелье «КоТиС» — перетяжка салона в Вологде">
+  <meta property="og:description" content="Руль, сиденья, потолок, авточехлы, реставрация кожи и шумоизоляция. 10 лет опыта и гарантия на работы.">
+  <meta property="og:url" content="__SITE_URL__/">
+  <meta property="og:image" content="__SITE_URL__/assets/img/brand/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preload" href="assets/fonts/inter-400.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-display-700.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" as="image" href="assets/img/hero/hero-seats.webp" fetchpriority="high">
+
+  <!-- Тема применяется до отрисовки, чтобы не было «вспышки» -->
+  <script>
+    document.documentElement.classList.add('js');
+    (function () {
+      try {
+        var saved = localStorage.getItem('kotis-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) { /* остаётся тёмная тема */ }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/motion.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "АвтоАтелье «КоТиС»",
+    "description": "Перетяжка салона, пошив авточехлов, реставрация кожи, шумоизоляция и детейлинг в Вологде.",
+    "image": "__SITE_URL__/assets/img/brand/og-image.jpg",
+    "telephone": ["+7-953-503-74-32", "+7-911-506-18-19"],
+    "address": { "@type": "PostalAddress", "streetAddress": "ул. Гагарина, 83А", "addressLocality": "Вологда", "addressCountry": "RU" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "ratingCount": "77", "reviewCount": "57", "bestRating": "5" },
+    "sameAs": ["https://vk.ru/kotis35", "https://yandex.ru/maps/org/kotis/232625402169/"]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- Иконки: <svg class="icon"><use href="#i-имя"/></svg> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-vk" viewBox="0 0 24 24"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.254-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.202 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+      <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7M12 19V5"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <!-- ШАПКА -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="АвтоАтелье «КоТиС» — на главную">
+        <img class="brand-mark" src="assets/img/brand/logo.webp" width="34" height="40" alt="" decoding="async">
+        <span class="brand-text"><strong>КоТиС</strong><small>автоателье, Вологда</small></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#works">Работы</a></li>
+          <li><a href="#calc">Стоимость</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+        <div class="nav-extra">
+          <a class="btn btn-primary btn-lg" href="#booking">Записаться</a>
+          <div class="nav-extra-row">
+            <a class="btn btn-ghost" href="tel:+79535037432"><svg class="icon"><use href="#i-phone"/></svg> Позвонить</a>
+            <a class="btn btn-ghost" href="https://vk.ru/kotis35" target="_blank" rel="noopener"><svg class="icon icon-fill"><use href="#i-vk"/></svg> ВКонтакте</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-phone" href="tel:+79535037432" aria-label="Позвонить +7 953 503-74-32">
+          <svg class="icon"><use href="#i-phone"/></svg><span>+7 (953) 503-74-32</span>
+        </a>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Переключить тему оформления" title="Светлая / тёмная тема">
+          <svg class="icon icon-sun"><use href="#i-sun"/></svg>
+          <svg class="icon icon-moon"><use href="#i-moon"/></svg>
+        </button>
+        <a class="btn btn-primary btn-sm header-cta" href="#booking">Записаться</a>
+        <button class="icon-btn burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title">Перетяжка салона и реставрация кожи в Вологде</h1>
+          <p class="hero-lead hero-fade" style="--d:650ms">Руль, сиденья, потолок, дверные карты, каркасные авточехлы и шумоизоляция. Аккуратно, по технологии и в срок.</p>
+          <div class="hero-cta hero-fade" style="--d:800ms">
+            <a class="btn btn-primary btn-lg" href="#booking">Записаться в ателье</a>
+            <a class="btn btn-ghost btn-lg" href="#calc">Рассчитать стоимость</a>
+          </div>
+          <ul class="hero-facts hero-fade" style="--d:950ms">
+            <li><b>Гарантия</b><span>на все выполненные работы</span></li>
+            <li><b>Подменный руль</b><span>машину можно не оставлять</span></li>
+            <li><b>Руль за день</b><span>часто управляемся за несколько часов</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <span class="hero-orb" aria-hidden="true"></span>
+          <svg class="hero-stitch" aria-hidden="true" focusable="false"><rect x="0" y="0" rx="30" ry="30"/></svg>
+          <div class="hero-layer hero-layer-main">
+            <figure class="hero-photo hero-photo-main">
+              <img src="assets/img/hero/hero-seats.webp" width="900" height="1200" alt="Салон Ford Mustang, перетянутый оранжевой алькантарой и кожей" fetchpriority="high" decoding="async">
+              <span class="hero-sheen" aria-hidden="true"></span>
+            </figure>
+          </div>
+          <div class="hero-layer hero-layer-inset">
+            <figure class="hero-photo hero-photo-inset">
+              <img src="assets/img/hero/hero-wheel.webp" width="480" height="640" alt="Руль, перетянутый алькантарой" decoding="async">
+            </figure>
+          </div>
+          <ul class="hero-tags" aria-hidden="true">
+            <li>Алькантара</li><li>Кожа</li><li>Строчка ромбом</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- УСЛУГИ. Цены: data-price — единый источник для карточек и калькулятора. -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 id="services-title">Услуги и цены</h2>
+          <p class="lead">Перетягиваем, шьём, восстанавливаем и приводим в порядок. Цены указаны «от», точную стоимость назовём после осмотра или по фото.</p>
+        </header>
+
+        <div class="services-feature" data-snap>
+          <article class="service service-card spot reveal" style="--i:0" data-service="Перетяжка руля" data-price="5000">
+            <figure>
+              <img src="assets/img/hero/svc-wheel.webp" width="800" height="1067" alt="Руль Porsche, перетянутый алькантарой" loading="lazy" decoding="async">
+              <span class="price-badge"><small>от</small>5 000 ₽</span>
+            </figure>
+            <div class="service-body">
+              <h3>Перетяжка руля</h3>
+              <p>Экокожа, натуральная кожа или алькантара. Выбор фактур и цветов строчки, ручки КПП и ручника в комплект. На время работы ставим подменный руль.</p>
+              <ul class="tags"><li>Подменный руль</li><li>Часто за день</li></ul>
+              <div class="service-foot">
+                <span class="service-price"><small>от</small>5 000 ₽</span>
+                <button class="link-btn link-arrow" type="button" data-order="Перетяжка руля">Заказать <svg class="icon"><use href="#i-arrow"/></svg></button>
+              </div>
+            </div>
+          </article>
+          <article class="service service-card spot reveal" style="--i:1" data-service="Перетяжка сидений" data-price="18000">
+            <figure>
+              <img src="assets/img/hero/svc-seats.webp" width="800" height="1067" alt="Сиденья в коньячной коже с контрастной строчкой" loading="lazy" decoding="async">
+              <span class="price-badge"><small>от</small>18 000 ₽</span>
+            </figure>
+            <div class="service-body">
+              <h3>Перетяжка сидений</h3>
+              <p>Сохраним заводской вид или изменим дизайн: стёжка ромбом, перфорация, контрастный кант. Ремонт обшивки и восстановление поролона.</p>
+              <ul class="tags"><li>Стёжка ромбом</li><li>Перфорация</li><li>Кант</li></ul>
+              <div class="service-foot">
+                <span class="service-price"><small>от</small>18 000 ₽</span>
+                <button class="link-btn link-arrow" type="button" data-order="Перетяжка сидений">Заказать <svg class="icon"><use href="#i-arrow"/></svg></button>
+              </div>
+            </div>
+          </article>
+          <article class="service service-card spot reveal" style="--i:2" data-service="Пошив каркасных авточехлов" data-price="14000">
+            <figure>
+              <img src="assets/img/hero/svc-covers.webp" width="800" height="1067" alt="Каркасные авточехлы из чёрной экокожи со стёжкой ромбом" loading="lazy" decoding="async">
+              <span class="price-badge"><small>от</small>14 000 ₽</span>
+            </figure>
+            <div class="service-body">
+              <h3>Пошив авточехлов</h3>
+              <p>Собственное производство: каркасные чехлы по вашим сиденьям, с выбранным дизайном. Разные материалы, цвета и их сочетания.</p>
+              <ul class="tags"><li>Своё производство</li><li>По вашим сиденьям</li></ul>
+              <div class="service-foot">
+                <span class="service-price"><small>от</small>14 000 ₽</span>
+                <button class="link-btn link-arrow" type="button" data-order="Пошив каркасных авточехлов">Заказать <svg class="icon"><use href="#i-arrow"/></svg></button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="snap-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+
+        <div class="services-list">
+          <article class="service service-row reveal" style="--i:0" data-service="Перетяжка потолка и стоек" data-price="15000">
+            <h3>Потолок, стойки, козырьки</h3>
+            <p>Перетяжка и реставрация потолочной тканью, алькантарой и аналогами. Большой выбор материалов и цветов.</p>
+            <div class="service-side"><span class="service-price"><small>от</small>15 000 ₽</span><button class="link-btn link-arrow" type="button" data-order="Перетяжка потолка и стоек">Заказать <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+          </article>
+          <article class="service service-row reveal" style="--i:1" data-service="Перетяжка дверных карт" data-price="3000">
+            <h3>Дверные карты и подлокотники</h3>
+            <p>Перетянем дверные вставки и подлокотники износостойкими материалами, с ромбовой стёжкой или без.</p>
+            <div class="service-side"><span class="service-price"><small>от</small>3 000 ₽</span><button class="link-btn link-arrow" type="button" data-order="Перетяжка дверных карт">Заказать <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+          </article>
+          <article class="service service-row reveal" style="--i:0" data-service="Установка авточехлов" data-price="3000">
+            <h3>Установка авточехлов</h3>
+            <p>Профессиональная установка чехлов, в том числе купленных не у нас: ровно, без складок и перекосов.</p>
+            <div class="service-side"><span class="service-price"><small>от</small>3 000 ₽</span><button class="link-btn link-arrow" type="button" data-order="Установка авточехлов">Заказать <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+          </article>
+          <article class="service service-row reveal" style="--i:1" data-service="Реставрация и покраска кожи" data-price="4000">
+            <h3>Реставрация и покраска кожи</h3>
+            <p>Восстановим прожоги, царапины, порезы, трещины, потёртости, прокрасы от одежды. Салоны авто и изделия из кожи, покраска руля и сидений.</p>
+            <div class="service-side"><span class="service-price"><small>от</small>4 000 ₽</span><button class="link-btn link-arrow" type="button" data-order="Реставрация и покраска кожи">Заказать <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+          </article>
+          <article class="service service-row reveal" style="--i:0" data-service="Шумоизоляция салона" data-price="5000">
+            <h3>Шумоизоляция салона</h3>
+            <p>Полная или частичная: убираем шум дороги и двигателя. Пакет «Комплекс» от 12 000 ₽.</p>
+            <div class="service-side"><span class="service-price"><small>от</small>5 000 ₽</span><button class="link-btn link-arrow" type="button" data-order="Шумоизоляция салона">Заказать <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+          </article>
+          <article class="service service-row reveal" style="--i:1" data-service="Химчистка и детейлинг салона" data-price="500">
+            <h3>Химчистка и детейлинг</h3>
+            <p>Химчистка сидений, потолка и пластика, уход за кожей. Перед работами предупреждаем о нюансах.</p>
+            <div class="service-side"><span class="service-price"><small>от</small>500 ₽</span><button class="link-btn link-arrow" type="button" data-order="Химчистка и детейлинг салона">Заказать <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+          </article>
+        </div>
+
+        <div class="photo-estimate reveal">
+          <div>
+            <h3>Не нашли свою задачу в списке?</h3>
+            <p>Пришлите фото салона во ВКонтакте или позвоните: подскажем, что можно сделать, и назовём цену.</p>
+          </div>
+          <div class="photo-estimate-actions">
+            <a class="btn btn-primary" href="https://vk.ru/write-195433225" target="_blank" rel="noopener"><svg class="icon icon-fill"><use href="#i-vk"/></svg> Написать во ВКонтакте</a>
+            <a class="btn btn-ghost" href="tel:+79535037432"><svg class="icon"><use href="#i-phone"/></svg> Позвонить</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПОЧЕМУ МЫ -->
+    <section class="section section-alt" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 id="why-title">Комфорт, тишина, стиль</h2>
+          <p class="lead">Мы улучшаем эргономику салона, делаем его тише и подбираем материалы, цвета и фактуры в тон экстерьеру, под вкус владельца.</p>
+        </header>
+
+        <div class="trio reveal" data-tabs>
+          <div class="trio-tabs" role="tablist" aria-label="Что мы улучшаем в салоне">
+            <button class="trio-tab is-active" role="tab" id="tab-comfort" aria-selected="true" aria-controls="panel-comfort" type="button"><span class="trio-n">01</span><span class="trio-t">Комфорт</span></button>
+            <button class="trio-tab" role="tab" id="tab-quiet" aria-selected="false" aria-controls="panel-quiet" tabindex="-1" type="button"><span class="trio-n">02</span><span class="trio-t">Тишина</span></button>
+            <button class="trio-tab" role="tab" id="tab-style" aria-selected="false" aria-controls="panel-style" tabindex="-1" type="button"><span class="trio-n">03</span><span class="trio-t">Стиль</span></button>
+            <span class="trio-bar" aria-hidden="true"></span>
+          </div>
+
+          <div class="trio-stage">
+            <div class="trio-panel is-active" role="tabpanel" id="panel-comfort" aria-labelledby="tab-comfort">
+              <div class="trio-text">
+                <h3>Салон, в котором удобно</h3>
+                <p>Улучшаем эргономику: перетягиваем руль и сиденья, меняем обшивку и восстанавливаем поролон. Пока делаем руль, ставим подменный: машину можно не оставлять.</p>
+              </div>
+              <figure class="trio-media"><img src="assets/img/hero/hero-leather.webp" width="900" height="1200" alt="Сиденья в коньячной коже с белой строчкой" loading="lazy" decoding="async"></figure>
+            </div>
+            <div class="trio-panel" role="tabpanel" id="panel-quiet" aria-labelledby="tab-quiet" hidden>
+              <div class="trio-text">
+                <h3>Меньше шума дороги и двигателя</h3>
+                <p>Шумоизоляция полная или частичная: убираем шум дороги и двигателя, чтобы в салоне было тише. Пакет «Комплекс» от 12 000 ₽.</p>
+              </div>
+              <div class="trio-media trio-wave" aria-hidden="true">
+                <svg viewBox="0 0 400 200" preserveAspectRatio="none">
+                  <path class="wave wave-noise" d="M0 100 L20 60 L40 140 L60 40 L80 160 L100 50 L120 150 L140 30 L160 170 L180 60 L200 140 L220 40 L240 160 L260 55 L280 145 L300 35 L320 165 L340 60 L360 140 L380 70 L400 100"/>
+                  <path class="wave wave-calm" d="M0 100 C 50 96, 100 104, 150 100 S 250 96, 300 100 S 360 103, 400 100"/>
+                </svg>
+                <span class="wave-label wave-label-a">Шум</span><span class="wave-label wave-label-b">Тишина</span>
+              </div>
+            </div>
+            <div class="trio-panel" role="tabpanel" id="panel-style" aria-labelledby="tab-style" hidden>
+              <div class="trio-text">
+                <h3>Салон в тон кузову и вашему вкусу</h3>
+                <p>Подбираем материалы, цвета и фактуры: кожа, экокожа, алькантара. Строчка ромбом, перфорация, контрастный кант и строчка.</p>
+                <ul class="swatches" aria-label="Примеры цветов материалов"><li style="--c:#f2992e"></li><li style="--c:#b8672e"></li><li style="--c:#1d1b1f"></li><li style="--c:#e9e2d4"></li><li style="--c:#d9473d"></li></ul>
+              </div>
+              <figure class="trio-media"><img src="assets/img/hero/hero-main.webp" width="750" height="1000" alt="Салон Ford Mustang с оранжевой отделкой" loading="lazy" decoding="async"></figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-item why-big spot reveal" style="--i:0"><div class="why-num"><b data-count="10">10</b><span>лет</span></div><h3>Десять лет опыта</h3><p>От рулей и дверных карт до полной перетяжки и шумоизоляции. Клиенты возвращаются: «салон делал у них 3 года назад, служит прекрасно».</p></div>
+          <div class="why-item spot reveal" style="--i:1"><span class="why-idx">02</span><h3>Гарантия на работы</h3><p>Отвечаем за результат и даём гарантию на все выполненные работы.</p></div>
+          <div class="why-item spot reveal" style="--i:2"><span class="why-idx">03</span><h3>Подменный руль</h3><p>Пока перетягиваем ваш руль, ставим подменный. Машину не нужно оставлять.</p></div>
+          <div class="why-item spot reveal" style="--i:0"><span class="why-idx">04</span><h3>Строго в срок</h3><p>Соблюдаем технологии и обещанные сроки. О предстоящих работах предупреждаем заранее.</p></div>
+          <div class="why-item spot reveal" style="--i:1"><span class="why-idx">05</span><h3>Современные материалы</h3><p>Кожа, экокожа, алькантара, потолочные ткани. Помогаем выбрать цвет, текстуру и строчку.</p></div>
+          <div class="why-item spot reveal" style="--i:2"><span class="why-idx">06</span><h3>Бережно к автомобилю</h3><p>Работаем внимательно и аккуратно, чтобы вы остались довольны.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- РАБОТЫ (данные: assets/js/gallery-data.js) -->
+    <section class="section" id="works" aria-labelledby="works-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 id="works-title">Наши работы</h2>
+          <p class="lead">Нажмите на фото, чтобы рассмотреть строчку вблизи.</p>
+        </header>
+        <div class="gallery" id="gallery-grid"></div>
+        <div class="gallery-more">
+          <button class="btn btn-ghost btn-lg" type="button" id="gallery-open" aria-haspopup="dialog">Смотреть все работы</button>
+        </div>
+        <noscript><p class="muted">Включите JavaScript, чтобы посмотреть галерею, или загляните в <a class="link" href="https://vk.ru/kotis35">нашу группу ВКонтакте</a>.</p></noscript>
+      </div>
+    </section>
+
+    <!-- СТОИМОСТЬ -->
+    <section class="section section-alt" id="calc" aria-labelledby="calc-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 id="calc-title">Рассчитайте стоимость</h2>
+          <p class="lead">Отметьте нужные работы, и мы посчитаем стартовую стоимость. Точную цену назовём после осмотра: она зависит от автомобиля и материалов.</p>
+        </header>
+        <div class="calc reveal">
+          <ul class="calc-list" id="calc-list"></ul>
+          <aside class="calc-total" aria-live="polite">
+            <p class="calc-label">Ориентировочно от</p>
+            <p class="calc-sum"><span id="calc-sum">0</span> <small>₽</small></p>
+            <p class="calc-hint" id="calc-hint">Выберите хотя бы одну услугу</p>
+            <button class="btn btn-primary btn-block" type="button" id="calc-send" disabled>Отправить расчёт мастеру</button>
+            <p class="calc-note">Цены «от» взяты из прайса ателье. Это не публичная оферта.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ЭТАПЫ -->
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 id="process-title">Как мы работаем</h2>
+          <p class="lead">Вам нужно только выбрать день и время, записаться и приехать. Остальное на нас.</p>
+        </header>
+        <ol class="steps">
+          <li class="step reveal spot" style="--i:0"><span class="step-num">1</span><h3>Заявка</h3><p>Звоните, пишите во ВКонтакте или оставьте заявку на сайте. Запись заранее, чтобы не ждать.</p></li>
+          <li class="step reveal spot" style="--i:1"><span class="step-num">2</span><h3>Осмотр и подбор</h3><p>Обсуждаем задачу, подбираем материал, цвет, фактуру и строчку. Называем цену и срок.</p></li>
+          <li class="step reveal spot" style="--i:2"><span class="step-num">3</span><h3>Работа</h3><p>Делаем по технологии. Для руля ставим подменный, можно не оставлять машину.</p></li>
+          <li class="step reveal spot" style="--i:3"><span class="step-num">4</span><h3>Выдача с гарантией</h3><p>Принимаете работу, оплачиваете любым удобным способом и забираете автомобиль.</p></li>
+        </ol>
+        <div class="process-cta reveal"><a class="btn btn-primary btn-lg" href="#booking">Записаться в ателье</a><a class="btn btn-ghost btn-lg" href="tel:+79535037432"><svg class="icon"><use href="#i-phone"/></svg> Позвонить</a></div>
+      </div>
+    </section>
+
+    <!-- ОТЗЫВЫ (оригинальные отзывы с Яндекс Карт) -->
+    <section class="section section-alt" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 id="reviews-title">Отзывы клиентов</h2>
+        </header>
+        <div class="rating reveal">
+          <p class="rating-num">5,0<small>из 5</small></p>
+          <div class="rating-info">
+            <span class="stars stars-lg" role="img" aria-label="Оценка 5 из 5"><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg></span>
+            <p class="rating-meta">77 оценок и 57 отзывов на Яндекс Картах</p>
+            <span class="badge">«Хорошее место 2026»</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews" id="reviews-ticker" role="region" aria-label="Отзывы клиентов">
+        <div class="reviews-track">
+          <div class="reviews-set">
+            <blockquote class="review spot"><div class="review-top"><span class="avatar" aria-hidden="true">Е</span><div class="review-who"><b>Евгений М.</b><span>5 мая</span></div><span class="stars" role="img" aria-label="Оценка 5 из 5"><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg></span></div><p>Все супер, химка огонь чисто как в новой, ремонт кресел тоже выше всяких похвал. Сделали оперативно и качественно, о предполагаемых работах предупреждали. Спасибо огромное )</p><footer><span class="review-tag">химчистка и ремонт кресел</span></footer></blockquote>
+            <blockquote class="review spot"><div class="review-top"><span class="avatar" aria-hidden="true">А</span><div class="review-who"><b>Алексей С.</b><span>15 апреля</span></div><span class="stars" role="img" aria-label="Оценка 5 из 5"><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg></span></div><p>Выполнили перетяжку руля, ручки КПП Тойота Авенсис 2007 год. Ребята работают быстро, организовано, всегда на связи. Качество отличное!! Рекомендую! Салон делал у них 3 года назад, служит прекрасно!!!</p><footer><span class="review-tag">руль и ручка КПП</span></footer></blockquote>
+            <blockquote class="review spot"><div class="review-top"><span class="avatar" aria-hidden="true">В</span><div class="review-who"><b>Виталя Б.</b><span>26 ноября 2025</span></div><span class="stars" role="img" aria-label="Оценка 5 из 5"><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg></span></div><p>Подарили на день рождения отцу подарок в виде перешивки руля и ручки КПП, так же в подарок нам перешили кожух КПП, большое спасибо! Сделали очень быстро, качественно, поставили подменный руль, даже не пришлось оставлять машину. Именинник доволен, все довольны, спасибо большое, рекомендую максимально!</p><footer><span class="review-tag">руль, ручка и кожух КПП</span></footer></blockquote>
+            <blockquote class="review spot"><div class="review-top"><span class="avatar" aria-hidden="true">Н</span><div class="review-who"><b>Натали</b><span>10 сентября 2025</span></div><span class="stars" role="img" aria-label="Оценка 5 из 5"><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg></span></div><p>В июне обращалась на перетяжку передних сидений, качество материалов на высоком уровне, профессионально выполненная работа, все сделано в обговоренные сроки. Мастера своего дела, работой довольна! Рекомендую!</p><footer><span class="review-tag">перетяжка сидений</span></footer></blockquote>
+            <blockquote class="review spot"><div class="review-top"><span class="avatar" aria-hidden="true">П</span><div class="review-who"><b>Павел К.</b><span>25 сентября</span></div><span class="stars" role="img" aria-label="Оценка 5 из 5"><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg></span></div><p>Делали перетяжку руля на Митсубиси аутлендер. Всё отлично. Выглядит как новый. Спасибо большое. Поставили подменный руль. Сделали за один день. Мастера своего дела! Рекомендую!</p><footer><span class="review-tag">перетяжка руля</span></footer></blockquote>
+            <blockquote class="review spot"><div class="review-top"><span class="avatar" aria-hidden="true">С</span><div class="review-who"><b>Сергей Б.</b><span>8 января 2025</span></div><span class="stars" role="img" aria-label="Оценка 5 из 5"><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg></span></div><p>Обращался 30.12.2024 по перетяжке руля и рычага АКПП. Работа выполнена качественно, все было сделано за несколько часов без единого нарекания. Профессиональный подход и высокий уровень мастерства очевидны. Цены вполне приемлемые.</p><footer><span class="review-tag">руль и рычаг АКПП</span></footer></blockquote>
+            <blockquote class="review spot"><div class="review-top"><span class="avatar" aria-hidden="true">E</span><div class="review-who"><b>Elena P.</b><span>21 января 2024</span></div><span class="stars" role="img" aria-label="Оценка 5 из 5"><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg></span></div><p>Спасибо большое, исправили огрехи производителя на автомобиле Changan CS55 Plus. А именно, убрали красные вставки в салоне, добавили обогрев руля и перетянули руль. Автомобиль теперь выглядит дороже и презентабельнее, вернусь ещё делать потолок!</p><footer><span class="review-tag">руль и обогрев</span></footer></blockquote>
+            <blockquote class="review spot"><div class="review-top"><span class="avatar" aria-hidden="true">А</span><div class="review-who"><b>Алексей С.</b><span>30 июня 2023</span></div><span class="stars" role="img" aria-label="Оценка 5 из 5"><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg></span></div><p>Профессионалы своего дела. Молодая команда, соблюдены все пожелания, а главное сроки: как обещали, в этот же день забрал машину вечером. Остался доволен, ребята устанавливали каркасные чехлы на Октавиа А7…</p><footer><span class="review-tag">каркасные чехлы</span></footer></blockquote>
+            <blockquote class="review spot"><div class="review-top"><span class="avatar" aria-hidden="true">М</span><div class="review-who"><b>Михаил Ф.</b><span>19 декабря 2022</span></div><span class="stars" role="img" aria-label="Оценка 5 из 5"><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg></span></div><p>Руль и ручка КПП ходят уже 3 года — лучше, чем на многих новых машинах. Перетягивал сиденье на мотик — тоже все сделали, очень красиво и функционально. Спасибо, парни)</p><footer><span class="review-tag">руль, КПП, сиденье мотоцикла</span></footer></blockquote>
+            <blockquote class="review spot"><div class="review-top"><span class="avatar" aria-hidden="true">Р</span><div class="review-who"><b>Рита М.</b><span>7 ноября 2023</span></div><span class="stars" role="img" aria-label="Оценка 5 из 5"><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg><svg class="icon icon-fill"><use href="#i-star"/></svg></span></div><p>Обращаюсь к услугам Ольги уже в третий раз. Всегда машинка одета красиво и качественно. В последний раз результат превзошёл все мои ожидания, все чехлы сшиты точно по размерам, с идеальными строчками, цвет совпал с моим…</p><footer><span class="review-tag">пошив авточехлов</span></footer></blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <p class="reviews-source">Отзывы опубликованы клиентами на Яндекс Картах, имена сокращены. <a class="link" href="https://yandex.ru/maps/org/kotis/232625402169/reviews/" target="_blank" rel="noopener">Читать все отзывы</a></p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-layout">
+        <header class="section-head reveal">
+          <h2 id="faq-title">Частые вопросы</h2>
+          <p class="lead">Не нашли ответ? Позвоните или напишите, подскажем по вашему автомобилю.</p>
+          <a class="btn btn-ghost" href="tel:+79535037432"><svg class="icon"><use href="#i-phone"/></svg> +7 (953) 503-74-32</a>
+        </header>
+
+        <div class="faq-list">
+          <details class="faq reveal" style="--i:0" open><summary>Сколько времени занимает перетяжка руля?</summary><div class="faq-body"><p>Как правило, в течение дня, нередко за несколько часов. Чтобы не оставлять машину, на время работы ставим подменный руль.</p></div></details>
+          <details class="faq reveal" style="--i:1"><summary>Из каких материалов можно выбрать?</summary><div class="faq-body"><p>Натуральная кожа, экокожа, алькантара (в том числе для потолка и стоек), потолочные ткани. Помогаем выбрать цвет, фактуру и цвет строчки под ваш салон.</p></div></details>
+          <details class="faq reveal" style="--i:2"><summary>Даёте ли вы гарантию?</summary><div class="faq-body"><p>Да, на все работы предоставляется гарантия. Условия и срок обсудим при записи и зафиксируем.</p></div></details>
+          <details class="faq reveal" style="--i:3"><summary>Нужна ли предварительная запись?</summary><div class="faq-body"><p>Да, лучше записаться заранее: выберите день и время, и мы подготовим материалы и мастера. Записаться можно по телефону, во ВКонтакте или через форму на сайте.</p></div></details>
+          <details class="faq reveal" style="--i:4"><summary>Можно изменить дизайн, а не повторять заводской?</summary><div class="faq-body"><p>Конечно. Можем сохранить заводское исполнение или полностью изменить дизайн: стёжка ромбом, перфорация, контрастные кант и строчка, другое сочетание цветов.</p></div></details>
+          <details class="faq reveal" style="--i:5"><summary>Можно ли восстановить кожу без полной перетяжки?</summary><div class="faq-body"><p>Да. Реставрация и покраска убирают прожоги, царапины, порезы, трещины, потёртости и прокрасы от одежды на сиденьях, руле и других кожаных деталях.</p></div></details>
+          <details class="faq reveal" style="--i:6"><summary>Работаете ли вы с мотоциклами и грузовиками?</summary><div class="faq-body"><p>Да: перетягиваем сиденья мототехники, а в портфолио есть рули грузовиков. Уточните детали по телефону, подскажем сроки и цену.</p></div></details>
+          <details class="faq reveal" style="--i:6"><summary>Как можно оплатить?</summary><div class="faq-body"><p>Наличными, банковским переводом, безналичным расчётом и через СБП.</p></div></details>
+          <details class="faq reveal" style="--i:6"><summary>Можно приехать с собакой?</summary><div class="faq-body"><p>Можно: посещение с животными у нас разрешено.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ЗАПИСЬ -->
+    <section class="section section-booking" id="booking" aria-labelledby="booking-title">
+      <div class="container booking-layout">
+        <header class="section-head reveal">
+          <h2 id="booking-title">Запишитесь на удобное время</h2>
+          <p class="lead">Оставьте заявку, мы свяжемся, уточним детали и назовём стоимость. Или сразу позвоните.</p>
+
+          <ul class="contact-list booking-contacts" style="margin-top:28px">
+            <li><a class="contact-link" href="tel:+79535037432"><span class="contact-ico"><svg class="icon"><use href="#i-phone"/></svg></span><span class="contact-text"><b>+7 (953) 503-74-32</b><span>позвонить</span></span></a></li>
+            <li><a class="contact-link" href="tel:+79115061819"><span class="contact-ico"><svg class="icon"><use href="#i-phone"/></svg></span><span class="contact-text"><b>+7 (911) 506-18-19</b><span>позвонить</span></span></a></li>
+            <li><a class="contact-link" href="https://vk.ru/kotis35" target="_blank" rel="noopener"><span class="contact-ico"><svg class="icon icon-fill"><use href="#i-vk"/></svg></span><span class="contact-text"><b>Написать ВКонтакте</b><span>vk.ru/kotis35</span></span></a></li>
+          </ul>
+        </header>
+
+        <form class="form reveal" id="booking-form" novalidate style="--i:1">
+          <div class="field">
+            <label for="f-name">Ваше имя</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться" required>
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="f-phone">Телефон</label>
+            <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+
+          <fieldset class="field field-wide">
+            <legend>Что нужно сделать <span class="optional">можно выбрать несколько</span></legend>
+            <div class="chips" id="f-services"></div>
+          </fieldset>
+
+          <div class="field field-wide">
+            <label for="f-car">Автомобиль <span class="optional">по желанию</span></label>
+            <input id="f-car" name="car" type="text" placeholder="Марка, модель, год">
+          </div>
+          <div class="field field-wide">
+            <label for="f-comment">Комментарий <span class="optional">по желанию</span></label>
+            <textarea id="f-comment" name="comment" rows="3" placeholder="Например: хочу перетянуть руль в алькантару с красной строчкой"></textarea>
+          </div>
+
+          <!-- Ловушка для ботов: человек это поле не видит -->
+          <div class="hp" aria-hidden="true"><label>Не заполняйте <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+          <button class="btn btn-primary btn-lg btn-block field-wide" type="submit" id="form-submit">Отправить заявку</button>
+          <div class="form-result field-wide" id="form-result" hidden role="status"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section class="section" id="contacts" aria-labelledby="contacts-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 id="contacts-title">Контакты</h2>
+        </header>
+
+        <div class="contacts-layout">
+          <div class="contacts-card reveal">
+            <ul class="contact-list">
+              <li class="contact-row reveal spot" style="--i:0"><span class="contact-ico"><svg class="icon"><use href="#i-pin"/></svg></span><span class="contact-text"><b>Адрес</b><span>г. Вологда, ул. Гагарина, 83А</span></span></li>
+              <!-- Режим работы: уточните (в VK указано до 19:00, на Яндекс Картах до 18:00) -->
+              <li class="contact-row reveal spot" style="--i:1"><span class="contact-ico"><svg class="icon"><use href="#i-clock"/></svg></span><span class="contact-text"><b>Режим работы</b><span>Открыто до 18:00, график уточняйте по телефону</span></span></li>
+              <li class="contact-row reveal spot" style="--i:2"><span class="contact-ico"><svg class="icon"><use href="#i-phone"/></svg></span><span class="contact-text"><b>Телефоны</b><span><a href="tel:+79535037432">+7 (953) 503-74-32</a><br><a href="tel:+79115061819">+7 (911) 506-18-19</a></span></span></li>
+              <li class="contact-row reveal spot" style="--i:3"><span class="contact-ico"><svg class="icon icon-fill"><use href="#i-vk"/></svg></span><span class="contact-text"><b>ВКонтакте</b><span><a href="https://vk.ru/kotis35" target="_blank" rel="noopener">vk.ru/kotis35</a>, <a href="https://vk.ru/market-195433225" target="_blank" rel="noopener">товары и услуги</a></span></span></li>
+            </ul>
+
+            <div class="pay">
+              <p>Способы оплаты</p>
+              <div class="chips pay-chips"><span class="chip" style="--i:0">Наличные</span><span class="chip" style="--i:1">Банковский перевод</span><span class="chip" style="--i:2">Безналичная</span><span class="chip" style="--i:3">СБП</span></div>
+            </div>
+
+            <div class="contacts-actions">
+              <a class="btn btn-primary" href="https://yandex.ru/maps/org/kotis/232625402169/" target="_blank" rel="noopener">Открыть в Яндекс Картах</a>
+              <a class="btn btn-ghost" href="tel:+79535037432">Позвонить</a>
+            </div>
+          </div>
+
+          <!-- Карта Яндекса: показывает организацию по её ID. Прокрутка страницы не «залипает» на карте:
+               сначала нажатие, потом карту можно двигать. -->
+          <div class="map reveal" id="map" style="--i:1">
+            <iframe src="https://yandex.ru/map-widget/v1/?ll=39.8182%2C59.2046&amp;mode=search&amp;oid=232625402169&amp;ol=biz&amp;z=16" title="Карта: ул. Гагарина, 83А, Вологда" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            <button class="map-cover" type="button" id="map-cover" aria-label="Включить управление картой"></button>
+            <span class="map-hint">Нажмите на карту, чтобы двигать её</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid reveal">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="АвтоАтелье «КоТиС» — наверх">
+            <img class="brand-mark" src="assets/img/brand/logo.webp" width="34" height="40" alt="" loading="lazy" decoding="async">
+            <span class="brand-text"><strong>КоТиС</strong><small>автоателье, Вологда</small></span>
+          </a>
+          <p>Комфорт, тишина и стиль в вашем автомобиле. Перетяжка салона, авточехлы, реставрация кожи и шумоизоляция.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Навигация в подвале">
+          <h3>Разделы</h3>
+          <ul>
+            <li><a href="#services">Услуги и цены</a></li>
+            <li><a href="#works">Наши работы</a></li>
+            <li><a href="#calc">Стоимость</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#faq">Вопросы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contacts">
+          <h3>Связаться</h3>
+          <ul>
+            <li><a href="tel:+79535037432">+7 (953) 503-74-32</a></li>
+            <li><a href="tel:+79115061819">+7 (911) 506-18-19</a></li>
+            <li>г. Вологда, ул. Гагарина, 83А</li>
+            <li><a href="https://vk.ru/kotis35" target="_blank" rel="noopener">ВКонтакте</a>, <a href="https://yandex.ru/maps/org/kotis/232625402169/" target="_blank" rel="noopener">Яндекс Карты</a></li>
+          </ul>
+        </div>
+
+        <!-- Логотип студии-разработчика; версия зависит от темы -->
+        <div class="footer-dev">
+          <a class="dev-logo" href="https://setchatkaglaza.github.io/setchatkaglaza/" target="_blank" rel="noopener" aria-label="SetchatkaGlaza Web Studio — сайт разработчика">
+            <img class="dev-logo-dark" src="assets/img/brand/dev-logo-dark.webp" width="900" height="480" alt="SetchatkaGlaza Web Studio" loading="lazy" decoding="async">
+            <img class="dev-logo-light" src="assets/img/brand/dev-logo-light.webp" width="720" height="380" alt="SetchatkaGlaza Web Studio" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> АвтоАтелье «КоТиС». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Плавающие элементы -->
+  <a class="mobile-bar-call" href="tel:+79535037432" aria-label="Позвонить в ателье"><svg class="icon"><use href="#i-phone"/></svg><span>Позвонить</span></a>
+  <button class="to-top" type="button" aria-label="Наверх"><svg class="icon"><use href="#i-up"/></svg></button>
+
+  <!-- Окно «Все работы» -->
+  <div class="modal" id="works-modal" role="dialog" aria-modal="true" aria-labelledby="works-modal-title" hidden>
+    <div class="modal-panel">
+      <div class="modal-head">
+        <div class="modal-title"><h2 id="works-modal-title">Все работы</h2><span class="modal-count" id="works-count"></span></div>
+        <button class="icon-btn" type="button" id="works-close" aria-label="Закрыть"><svg class="icon"><use href="#i-x"/></svg></button>
+      </div>
+      <div class="modal-filters"><div class="chips" id="gallery-filters" role="group" aria-label="Категории работ"></div></div>
+      <div class="modal-body" id="works-body"><div class="gallery" id="gallery-all"></div></div>
+    </div>
+  </div>
+
+  <!-- Просмотр фото -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" hidden>
+    <div class="lightbox-top">
+      <span class="lightbox-count" id="lightbox-count"></span>
+      <button class="lightbox-close icon-btn" type="button" aria-label="Закрыть"><svg class="icon"><use href="#i-x"/></svg></button>
+    </div>
+    <figure class="lightbox-figure">
+      <div class="lightbox-stage"><img id="lightbox-img" alt=""></div>
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <div class="lightbox-nav">
+      <button class="lightbox-prev icon-btn" type="button" aria-label="Предыдущее фото"><svg class="icon"><use href="#i-chev-l"/></svg></button>
+      <button class="lightbox-next icon-btn" type="button" aria-label="Следующее фото"><svg class="icon"><use href="#i-chev-r"/></svg></button>
+    </div>
+  </div>
+
+  <!-- Скрипты: обычные (не модули), чтобы сайт работал и при открытии index.html двойным кликом -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/gallery-data.js"></script>
+  <script src="assets/js/core.js" defer></script>
+  <script src="assets/js/motion.js" defer></script>
+  <script src="assets/js/gallery.js" defer></script>
+  <script src="assets/js/calculator.js" defer></script>
+  <script src="assets/js/reviews.js" defer></script>
+  <script src="assets/js/form.js" defer></script>
+</body>
+</html>

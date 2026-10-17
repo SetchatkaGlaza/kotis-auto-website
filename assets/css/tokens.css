@@ -1,0 +1,72 @@
+/* ==========================================================================
+   tokens.css — шрифты и дизайн-токены (цвета, отступы, радиусы, тени)
+   Здесь меняется «характер» сайта: достаточно поправить переменные.
+   ========================================================================== */
+
+/* --- Шрифты (Inter, лицензия SIL OFL; кириллица + латиница, лежат в проекте) --- */
+@font-face { font-family: "Inter"; font-weight: 400; font-style: normal; font-display: swap; src: url("../fonts/inter-400.woff") format("woff"); }
+@font-face { font-family: "Inter"; font-weight: 500; font-style: normal; font-display: swap; src: url("../fonts/inter-500.woff") format("woff"); }
+@font-face { font-family: "Inter"; font-weight: 600; font-style: normal; font-display: swap; src: url("../fonts/inter-600.woff") format("woff"); }
+@font-face { font-family: "Inter"; font-weight: 700; font-style: normal; font-display: swap; src: url("../fonts/inter-700.woff") format("woff"); }
+@font-face { font-family: "Inter Display"; font-weight: 600; font-style: normal; font-display: swap; src: url("../fonts/inter-display-600.woff") format("woff"); }
+@font-face { font-family: "Inter Display"; font-weight: 700; font-style: normal; font-display: swap; src: url("../fonts/inter-display-700.woff") format("woff"); }
+@font-face { font-family: "Inter Display"; font-weight: 800; font-style: normal; font-display: swap; src: url("../fonts/inter-display-800.woff") format("woff"); }
+
+:root {
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: "Inter Display", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --amber: #f2992e;
+  --red: #d9473d;
+  --accent: var(--amber);
+  --on-accent: #1b1208;
+
+  --container: 1200px;
+  --gutter: clamp(18px, 4vw, 32px);
+  --section-y: clamp(64px, 9vw, 112px);
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-lg: 22px;
+  --header-h: 68px;
+
+  --ease: cubic-bezier(.22, .72, .2, 1);
+  --t-fast: .16s;
+  --t: .28s;
+}
+
+/* Тёмная тема (по умолчанию) */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0f0e10;
+  --bg-alt: #151418;
+  --surface: #1b1a1f;
+  --surface-2: #232229;
+  --line: rgba(255, 255, 255, .1);
+  --line-strong: rgba(255, 255, 255, .22);
+  --text: #f4f0e8;
+  --text-soft: #d6d0c6;
+  --muted: #aca59a;
+  --accent-text: #f5a944;
+  --header-bg: #0f0e10;
+  --shadow: 0 20px 48px -24px rgba(0, 0, 0, .85);
+  --glow: rgba(242, 153, 46, .13);
+}
+
+/* Светлая тема */
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f7f3ec;
+  --bg-alt: #eee8dc;
+  --surface: #ffffff;
+  --surface-2: #f5f0e6;
+  --line: rgba(40, 28, 12, .13);
+  --line-strong: rgba(40, 28, 12, .3);
+  --text: #1a150e;
+  --text-soft: #3a3329;
+  --muted: #5f5748;
+  --accent-text: #8f4702;
+  --header-bg: #f7f3ec;
+  --shadow: 0 20px 48px -28px rgba(70, 40, 5, .4);
+  --glow: rgba(242, 153, 46, .2);
+}
